@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+            animation: fadeInDown 1s ease;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: #2d3748;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+            cursor: pointer;
+        }
+
+        .project-card:nth-child(1) { animation-delay: 0.1s; }
+        .project-card:nth-child(2) { animation-delay: 0.2s; }
+        .project-card:nth-child(3) { animation-delay: 0.3s; }
+        .project-card:nth-child(4) { animation-delay: 0.4s; }
+        .project-card:nth-child(5) { animation-delay: 0.5s; }
+        .project-card:nth-child(6) { animation-delay: 0.6s; }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .project-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-icon {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            color: #e2e8f0;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            color: #cbd5e0;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #4a5568;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #e2e8f0;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Portfolio</h1>
+            <p class="tagline">Crafting digital experiences with passion and precision</p>
+        </header>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">🚀</div>
+                <h3 class="project-title">Project One</h3>
+                <p class="project-description">
+                    Project description goes here.
+                </p>
+                <div class="project-tags">
+                    <span class="tag">Tag1</span>
+                    <span class="tag">Tag2</span>
+                    <span class="tag">Tag3</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">💡</div>
+                <h3 class="project-title">Project Two</h3>
+                <p class="project-description">
+                    Project description goes here.
+                </p>
+                <div class="project-tags">
+                    <span class="tag">Tag1</span>
+                    <span class="tag">Tag2</span>
+                    <span class="tag">Tag3</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🎨</div>
+                <h3 class="project-title">Project Three</h3>
+                <p class="project-description">
+                    Project description goes here.
+                </p>
+                <div class="project-tags">
+                    <span class="tag">Tag1</span>
+                    <span class="tag">Tag2</span>
+                    <span class="tag">Tag3</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">📱</div>
+                <h3 class="project-title">Project Four</h3>
+                <p class="project-description">
+                    Project description goes here.
+                </p>
+                <div class="project-tags">
+                    <span class="tag">Tag1</span>
+                    <span class="tag">Tag2</span>
+                    <span class="tag">Tag3</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">⚡</div>
+                <h3 class="project-title">Project Five</h3>
+                <p class="project-description">
+                    Project description goes here.
+                </p>
+                <div class="project-tags">
+                    <span class="tag">Tag1</span>
+                    <span class="tag">Tag2</span>
+                    <span class="tag">Tag3</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🔒</div>
+                <h3 class="project-title">Project Six</h3>
+                <p class="project-description">
+                    Project description goes here.
+                </p>
+                <div class="project-tags">
+                    <span class="tag">Tag1</span>
+                    <span class="tag">Tag2</span>
+                    <span class="tag">Tag3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
